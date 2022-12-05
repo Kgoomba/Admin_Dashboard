@@ -1,12 +1,53 @@
-.header{
-  
+html {
+  height: 100%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: gainsboro;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.big_grid {
+  display: grid;
+  grid-template-columns: clamp(250px, 15vw, 350px) auto;
+  grid-template-rows: 20vh 80vh;
+}
+
+a {
+  display: grid;
+  text-decoration: none;
+  color: white;
+  grid-template-columns: 20% 50%;
+  align-items: center;
+  padding-left: 35px;
 }
 
 .sidebar {
+  display: grid;
+  background-color: rgb(0, 167, 209);
+  color: white;
+  grid-row-start: span 2;
+}
 
+i {
+  width: fit-content;
+}
+
+.dashboard_title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.header{
+  display: grid;
+  background-color: white;
 }
 
 .center_piece {
-
+  display: grid;
 }
+
+
 
