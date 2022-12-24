@@ -1,3 +1,4 @@
+
 html {
   height: 100%;
 }
@@ -11,8 +12,8 @@ html, body {
 
 .big_grid {
   display: grid;
-  grid-template-columns: clamp(250px, 15vw, 350px) auto;
-  grid-template-rows: 20vh 80vh;
+  grid-template-columns: clamp(250px, 20vw, 350px) auto;
+  grid-template-rows: 23vh 77vh;
 }
 
 a {
@@ -21,7 +22,9 @@ a {
   color: white;
   grid-template-columns: 20% 50%;
   align-items: center;
-  padding-left: 35px;
+  margin-left: 35px;
+  width: fit-content;
+  height: fit-content;
 }
 
 .sidebar {
@@ -29,6 +32,7 @@ a {
   background-color: rgb(0, 167, 209);
   color: white;
   grid-row-start: span 2;
+  grid-template-rows: 10% repeat(10, 50px) 30%;
 }
 
 i {
@@ -36,18 +40,87 @@ i {
 }
 
 .dashboard_title {
-  font-size: 20px;
+  font-size: 1.7em;
   font-weight: bold;
 }
 
 .header{
   display: grid;
   background-color: white;
+  grid-template: 35% 65%/ 1fr 1fr;
+  align-items: center;
 }
 
-.center_piece {
-  display: grid;
+.search_sect {
+  margin-left: 3vw;
 }
+
+#search_bar {
+  height: 25px;
+  width: 500px;
+  background-color: rgb(226, 226, 226);
+  border: 0px ;
+  border-radius: 16px;
+  padding: 16px 12px;
+  box-sizing: border-box;
+  resize: none;
+}
+
+.center_content {
+  display: grid;
+  justify-content: space-evenly;
+  gap: 15px;
+  margin-right: 20%;
+  grid-template: 5vh repeat(3, 1fr)/ repeat(3, fit-content(200px));
+  overflow: hidden;
+}
+
+.project_tile {
+  height: 20vh;
+  width: clamp(250px, 17vw, 400px);
+  background-color: white;
+  border-radius: 8px;
+  border-left: 8px solid orange;
+  padding-left: 7%;
+  overflow: hidden;
+}
+
+.mid_tile {
+  align-self: center;
+}
+
+.bottom_tile {
+  align-self: end;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+.center_p {
+  
+}
+
+.announcements, .trending {
+  height: 30vh;
+  width: clamp(225px, 15vw ,350px);
+  border-radius: 8px;
+  justify-self: left;
+  background-color: white;
+}
+
+.announcements {
+  grid-row: 2 / 4;
+  grid-column: 3 / 3;
+  align-self: start;
+}
+
+.trending {
+  grid-row: 3 / 5 ;
+  grid-column: 3 / 3;
+  align-self: end;
+}
+
 
 
 
